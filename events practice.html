@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="one"></h1>
+    Enter your name: <input type="text" id="input">
+    <button type="submit" id="btn" onclick="wel()">Show</button>
+
+    <p id="para"></p>
+    <button type="submit" id="btn2" ondblclick="greet()">color</button>
+
+    <h1 id="add"></h1>
+    Enter 1st number :<input type="number" id="num" placeholder="Enter 1st number">
+    Enter 2nd number :<input type="number" id="num1" placeholder="Enter 2nd number">
+    <button type="submit" onkeydown="addition()">Output</button>
+    <script>
+        function wel(){
+            let val=document.getElementById('input').value;
+            document.getElementById('one').innerHTML=val;
+        }
+        
+        function greet()
+        {
+            document.getElementById('para').innerHTML='Color is purple!!!!';
+            document.getElementById('para').style.color="Purple";
+        }
+
+        function addition()
+        {     
+            let int1= parseInt(document.getElementById('num').value);
+            let int2=parseInt(document.getElementById('num1').value);
+            let output=int1+int2;
+            return document.getElementById('add').innerHTML=`Addtion of given numbers is :${output}`
+        }
+
+
+    </script>
+</body>
+</html>
